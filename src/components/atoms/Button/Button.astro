@@ -1,0 +1,17 @@
+---
+import './Button.css';
+const { className = '', } = Astro.props;
+
+// Clase base
+const baseClass = 'btn';
+
+// Clase completa: btn + modificadores
+const fullClass = `${baseClass} ${className}`.trim();
+
+
+---
+
+<button type="button" class={fullClass} >
+    <slot></slot>
+</button>
+

@@ -1,0 +1,11 @@
+---
+import './Checkbox.css';
+const { label = "Explora" } = Astro.props;
+
+---
+
+<label class="checkbox-wrapper">
+    <input class="checkbox-wrapper__input" id={label} value={label} type="checkbox" />
+    <span class="checkbox-wrapper__custom-checkbox" aria-hidden="true"></span>
+    {label}
+  </label>

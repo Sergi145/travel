@@ -1,0 +1,36 @@
+.link {
+    color: #342E33;
+    font-weight: 700;
+    display: flex;   
+  }
+  
+  .link.link-image {
+    margin-right: 0.3rem;
+  }
+  
+  .link.link--active {
+    position: relative;
+  }
+  
+  .link.link--active::after {
+    position: absolute;
+    bottom: -2.1rem;
+    left: 0;
+    background-color: #F88F50;
+    height: 0.125rem; /* 2px */
+    border-radius: 0.125rem; /* 2px */
+    content: '';
+    width: 100%;
+  }
+  
+  .link.link--active::before {
+    content: '';
+    height: 0.9375rem; /* 15px */
+    width: 0.9375rem; /* 15px */
+    position: absolute;
+    background-color: #F88F50;
+    top: 3rem; /* 30px */
+    left: 40%;
+    transform: rotate(45deg);
+  }
+  

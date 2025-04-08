@@ -1,0 +1,42 @@
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 700;
+  margin-right: 0.3125rem; /* 5px a rem */
+}
+
+/* Ocultamos el checkbox, pero sigue siendo accesible */
+.checkbox-wrapper input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox-wrapper__custom-checkbox {
+  width: 1rem; /* 16px */
+  height: 1rem; /* 16px */
+  background-color: white;
+  margin-right: 0.625rem; /* 10px */
+  border: 0.0625rem solid black; /* 1px */
+  border-radius: 0.125rem; /* 2px */
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked + .checkbox-wrapper__custom-checkbox {
+  background-image: url('./../../../../public/check.png'); 
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #FF8F50;
+}
+
+/* Accesibilidad con foco */
+.checkbox-wrapper input[type="checkbox"]:focus + .checkbox-wrapper__custom-checkbox {
+  outline: 0.125rem solid black; /* 2px */
+  outline-offset: 0.125rem; /* 2px */
+}

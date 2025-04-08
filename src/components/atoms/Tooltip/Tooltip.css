@@ -1,0 +1,58 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip:focus {
+  outline: 0.125rem solid black; /* 2px a rem */
+}
+
+.tooltip__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.tooltip__image {
+  position: relative;
+  top: 0.125rem; /* 2px a rem */
+}
+
+.tooltip__content {
+  position: absolute;
+  bottom: 2.0625rem; /* 33px a rem */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: #342E34;
+  padding: 0.3125rem; /* 5px a rem */
+  border-radius: 0.25rem; /* 4px a rem */
+  font-size: 0.875rem; /* 14px a rem */
+  white-space: nowrap;
+  opacity: 0;
+  font-weight: 500;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 10;
+  box-shadow: 0px 0px 3.125rem lightgrey; /* 50px a rem */
+}
+
+/* Flecha del tooltip */
+.tooltip__content::after {
+  content: "";
+  position: absolute;
+  bottom: -0.48rem; /* -4px a rem */
+  left: 44%;
+  transform: rotate(45deg);
+  border-width: 0.5rem; /* 8px a rem */
+  border-style: solid;
+  border-color: white; /* Color de la flecha */
+}
+
+/* Mostrar el tooltip al hacer hover o focus */
+.tooltip__button:hover + .tooltip__content,
+.tooltip__button:focus + .tooltip__content {
+  opacity: 1;
+  pointer-events: auto;
+}

@@ -1,0 +1,18 @@
+---
+import './Tooltip.css';
+const { label,id } = Astro.props;
+const tooltipId = `popover-${id || Math.random().toString(36).substr(2, 9)}`;
+const buttonId = `button-${tooltipId}`
+
+---
+
+
+
+<div class="tooltip">
+    <button type="button" class="tooltip__button tooltip__button--right" aria-labelledby="tooltip-button-id">
+        <img class="tooltip__image" src="./../../../../public/info.png" alt="">
+    </button>
+    <div id="tooltip-button-id" class="tooltip__content">{label}</div>
+</div>
+
+

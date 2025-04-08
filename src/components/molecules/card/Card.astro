@@ -1,0 +1,36 @@
+---
+import './Card.css';
+import Button from '../../atoms/Button/Button.astro';
+import Popover from '../../atoms/Popover/Popover.astro';
+
+const { imageSrc, title, subtitle, price, type, id } = Astro.props;
+---
+<div class="card">
+  <img class="card__image" src={imageSrc} alt="" />
+  <span class="card__badgebutton button button--secondary button--sm">{type}</span>
+  <div class="card__section">
+    <p class="card__title">
+      {title}
+      <span class="card__days">9 días</span>
+    </p>
+    <h4 class="card__subtitle">{subtitle}</h4>
+  </div>
+
+  <div class="card__footer">
+    <div class="card__price-info">
+      <div class="card__wrapper">
+        <span class="card__label">Desde</span>
+        <span class="card__price">{price}</span>
+      </div>
+      <Popover id={id} title={title} subtitle={subtitle} price={price} />
+    </div>
+
+    <div class="card__action-wrapper">
+      <div class="card__action">
+        <Button className="button button--reserve" hasLabel={true}>
+          Reserva<span class="sr-only">{subtitle}</span>
+        </Button>
+      </div>
+    </div>
+  </div>
+</div>

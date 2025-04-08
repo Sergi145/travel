@@ -1,0 +1,15 @@
+---
+import './Input.css';
+const {id,label,id_label,placeholder} = Astro.props;
+---
+
+
+<label for={id} class="form__label sr-only" id={id_label}>{label}</label>
+<input
+  type="text"
+  id={id}
+  class="form__input"
+  aria-describedby={id_label}
+  placeholder={placeholder}
+/>
+

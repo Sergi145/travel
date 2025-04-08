@@ -1,0 +1,53 @@
+.button {
+  padding: 0.75rem 1.125rem; /* 12px 18px */
+  border-radius: 1.25rem;    /* 20px */
+  border: none;
+  transition: background-color 0.2s ease;
+  color: white;
+}
+
+.button--primary {
+  background-color: #622F60;
+}
+
+.button--secondary {
+  background-color: #FF8F50;
+  color: black;
+}
+
+.button--light {
+  background-color: white;
+  color: #622F60;
+  border: 0.0625rem solid #622F60; /* 1px */
+}
+
+.button--reserve {
+  color: #622F60;
+  background-color: white;
+  border: 0.0625rem solid #622F60; /* 1px */
+}
+
+.button--filter {
+  padding: 0.5rem 0.875rem;      /* 8px 14px */
+  background-color: #FAF7F5;
+  display: none;
+  font-weight: 600;
+  font-size: 1.25rem;            /* 20px */
+  color: #2f222f;
+}
+
+@media (max-width: 75rem) {      /* 1200px */
+  .button--filter {
+    display: flex;
+  }
+}
+
+.button--img {
+  margin-right: 0.625rem;        /* 10px */
+}
+
+.button--sm {
+  font-size: 0.75rem;            /* 12px */
+  padding: 0.25rem 0.75rem;      /* 4px 12px */
+  font-weight: 700;
+}

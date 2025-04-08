@@ -1,0 +1,103 @@
+---
+import './Popover.css';
+const { buttonLabel = "Ver desglose", id ,title = "Título del Popover", content = "Contenido del Popover" ,price,titles, subtitle} = Astro.props;
+const popoverId = `popover-${id || Math.random().toString(36).substr(2, 9)}`;
+const buttonId = `button-${popoverId}`;
+
+---
+<div class="popover__wrapper">
+    <button aria-haspopup="dialog" aria-controls="popover" id={buttonId} aria-expanded="false" class="popover__trigger card__button card__button--breakdown">{buttonLabel}<span class="sr-only">del precio final del producto que son {price}</span><img class="card__button card__button--image" src="./../../../../public/Vector.png" alt=""></button>
+  
+    <div class="popover" role="dialog" aria-modal="true" aria-labelledby={buttonId} hidden tabindex="-1">
+      <div class="popover__header">
+        <p class="popover__header-title">Desglose de precios</p>
+        <button class="popover__close-popover"><img src="./../../../../public/close.png" alt="icono que tiene formato de cruz" aria-label="icono para poder cerrar la ventana emergente tambien puedes cerrarlo con la tecla escape"></button>
+      </div>
+      <div class="popover__body">
+            <p class="popover__body-title">{titles} {subtitle}</p>
+            <p class="popover__body-before-imp">Preio antes de los impuestos<span>{parseFloat(price.replace(',', '.').replace('*', '')) - (4.43 - 150.42)} €</span></p>
+            <p class="popover__body-be-imp">Impuesto<span>4.43 €</span></p>
+            <p class="popover__body-lore">Lorem Ipsum<span>150,42 €</span></p>
+      </div>
+      <div class="popover__footer">
+        <p class="popover__footer-final">Precio final<span>{price} €</span></p>
+      </div>
+    </div>
+  </div>
+  
+
+<script type="module" client:load>
+
+const popoverWrappers = document.querySelectorAll('.popover__wrapper');
+  let lastFocusedElement = null;
+
+  function closeAllPopovers() {
+    popoverWrappers.forEach(wrapper => {
+      const popover = wrapper.querySelector('.popover');
+      if (!popover.hidden) {
+        popover.hidden = true;
+        popover.removeAttribute('data-open');
+      }
+    });
+  }
+
+  popoverWrappers.forEach(wrapper => {
+    const popover = wrapper.querySelector('.popover');
+    const openBtn = wrapper.querySelector('.popover__trigger');
+    const closeBtn = wrapper.querySelector('.popover__close-popover');
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        close();
+      } else if (e.key === 'Tab') {
+        const focusables = popover.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    };
+
+    const open = () => {
+      closeAllPopovers(); // Cerramos cualquier otro
+      lastFocusedElement = document.activeElement;
+      popover.hidden = false;
+      popover.setAttribute('data-open', 'true');
+      popover.focus();
+     
+adjustPopoverPosition(popover);
+      document.addEventListener('keydown', handleKeyDown);
+    };
+
+    const close = () => {
+      popover.hidden = true;
+      popover.removeAttribute('data-open');
+      document.removeEventListener('keydown', handleKeyDown);
+      lastFocusedElement?.focus();
+    };
+
+    openBtn.addEventListener('click', open);
+    closeBtn.addEventListener('click', close);
+  });
+
+  function adjustPopoverPosition(popover) {
+  const rect = popover.getBoundingClientRect();
+  const vw = window.innerWidth;
+
+
+}
+
+
+</script>
+
+
+
+

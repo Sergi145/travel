@@ -1,0 +1,157 @@
+/* Sidebar.css */
+.sidebar {
+  margin-top: 4.0625rem; /* 65px */
+  background-color: #fbf6f4;
+  padding: 1rem; /* 16px */
+  border-radius: 1.5625rem; /* 25px */
+  width: 75%;
+  float: right;
+  padding-bottom: 0;
+  min-height: max-content;
+}
+
+@media (max-width: 75rem) { /* 1200px */
+  .sidebar {
+      position: absolute;
+      display: none;
+      z-index: 10;
+      top: -5.5625rem; /* -89px */
+      left: 0;
+      width: 25%;
+      border-radius: 0;
+      height: calc(100% + 1.5rem); /* 24px */
+      box-shadow: 0px 0px 3.125rem lightgrey; /* 50px */
+  }
+
+  .sidebar.open {
+      display: initial;
+  }
+}
+
+@media (max-width: 62.5rem) { /* 991.98px */
+  .sidebar {
+      width: 32%;
+  }
+}
+
+@media (max-width: 48rem) { /* 767.98px */
+  .sidebar {
+      width: 50%;
+  }
+}
+
+@media (max-width: 35.98rem) { /* 575.98px */
+  .sidebar {
+      position:absolute; /* se saca del flujo normal */
+      top: -4.0625rem; /* -65px */
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 99; /* asegúrate de que esté por encima del resto */
+      overflow-y: auto; /* si necesitas scroll en móvil */
+  }
+}
+
+.sidebar__wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.sidebar__title {
+  color: #342E34;
+  font-weight: 700;
+  font-family: "Syne", sans-serif;
+  text-align: center;
+  font-size: 1.125rem; /* 18px */
+  padding-bottom: 0.9375rem; /* 15px */
+  /*border-bottom: 1px solid #E0D9E0;*/
+}
+
+.sidebar__iconclose {
+  display: none;
+}
+
+@media (max-width: 75rem) { /* 1200px */
+  .sidebar__iconclose {
+      display: initial;
+      position: relative;
+      top: 0.4375rem; /* 7px */
+  }
+}
+
+.sidebar__item {
+  margin-bottom: 1.5625rem; /* 25px */
+}
+
+.submenu {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  padding: 1.0625rem; /* 17px */
+  padding-bottom: 0;
+}
+
+.submenu li {
+  margin-bottom: 1.25rem; /* 20px */
+  display: flex;
+}
+
+.submenu.show {
+  display: block; /* Muestra el submenu cuando tiene la clase 'show' */
+}
+
+.submenu__more {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 600;
+  color: #622f60;
+  text-decoration: underline;
+}
+
+.rotate {
+  transform: rotate(180deg); /* Rota el botón */
+  transition: transform 0.3s ease; /* Efecto suave */
+}
+
+.dropdown-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-btn:focus {
+  outline: 0.125rem solid black; /* 2px */
+}
+
+.dropdown-btn img,
+.dropdown-btn svg {
+  margin-right: 0.625rem; /* 10px */
+}
+
+.dropdown-btn[aria-expanded="true"] {
+  font-weight: 700;
+  color: #B85C28;
+}
+
+.dropdown-btn[aria-expanded="true"] .sidebar__icon {
+  transform: rotate(90deg);
+}
+
+.dropdown-btn[aria-expanded="true"] .fill.color {
+  font-weight: 700;
+  color: #B85C28;
+  fill: #B85C28;
+}
+
+.dropdown-btn[aria-expanded="true"] .fill {
+  stroke: #B85C28;
+  color: initial;
+  fill: transparent;
+}
+
+.dropwdown-btn__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

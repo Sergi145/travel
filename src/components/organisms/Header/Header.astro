@@ -1,0 +1,16 @@
+---
+import Navbar from "../../molecules/Navbar/Navbar.astro";
+import Button from "../../atoms/Button/Button.astro"
+import Logo from "../../atoms/Logo/Logo.astro";
+import './Header.css';
+---
+
+<header>
+    <h1><Logo></Logo></h1>
+    <Navbar></Navbar>
+    <Button className="button button--primary">Reserva<span class="sr-only">El Viaje</span></Button>
+    <button aria-label="boton amburguesa en mobile para abrir y cerrar menu" class="button-burguer" aria-expanded="false"><img class="button-burguer__img" src="./../../../../public/burgerMenu.png" alt=""></button>
+</header>
+
+
+

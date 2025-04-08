@@ -1,0 +1,169 @@
+---
+import './Sidebar.css';
+import Checkbox from "../../atoms/Checkbox/Checkbox.astro";
+import Input from '../../atoms/Input/Input.astro';
+import Tooltip from '../../atoms/Tooltip/Tooltip.astro';
+---
+
+<nav id="sidebar" class="sidebar" aria-label="Menú de navegación para filtrar mi búsqueda">
+    <div class="sidebar__wrapper">
+        <p class="sidebar__title">Filtrar mi búsqueda</p>
+        <button class="sidebar__iconclose"><img src="./../../../../public/close.png" alt="icono de cerra para cerrar el menu de filtar busqueda"></button>
+    </div>
+        <ul class="sidebar__list">
+    <li class="sidebar__item"><button
+        class="dropdown-btn"
+        id="toggle-btn"
+        aria-expanded="false"
+        aria-controls="submenu-Destinos"
+      ><span class="dropwdown-btn__wrapper"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.3232 20.3493C17.2808 20.3493 21.2998 16.3527 21.2998 11.4227C21.2998 6.49267 17.2808 2.49609 12.3232 2.49609C7.36561 2.49609 3.34668 6.49267 3.34668 11.4227C3.34668 16.3527 7.36561 20.3493 12.3232 20.3493Z" stroke="#342E34" stroke-width="1.2672" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4.03906 14.8585H6.45582C7.09679 14.8585 7.7115 14.6053 8.16473 14.1546C8.61796 13.7039 8.87258 13.0926 8.87258 12.4552V10.3952C8.87258 9.7578 9.1272 9.1465 9.58043 8.6958C10.0337 8.24509 10.6484 7.99188 11.2893 7.99188C11.9303 7.99188 12.545 7.73868 12.9982 7.28797C13.4515 6.83726 13.7061 6.22597 13.7061 5.58857V2.59473" stroke="#342E34" stroke-width="1.2672" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21.2967 11.2827C20.6053 10.9259 19.8384 10.7377 19.0595 10.7334H16.1179C15.477 10.7334 14.8623 10.9866 14.409 11.4373C13.9558 11.888 13.7012 12.4993 13.7012 13.1367C13.7012 13.7741 13.9558 14.3854 14.409 14.8361C14.8623 15.2868 15.477 15.54 16.1179 15.54C16.5758 15.54 17.0148 15.7209 17.3386 16.0428C17.6623 16.3648 17.8442 16.8014 17.8442 17.2567V18.4515" stroke="#342E34" stroke-width="1.2672" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.765 19.7887C11.9164 19.449 11.9398 19.0374 11.7646 18.6727C11.5895 18.3081 11.3958 17.787 10.9967 17.611C10.5975 17.435 10.1545 17.4011 9.76516 17.5169C9.37581 17.6326 9.07199 17.8885 8.92052 18.2282C8.81233 18.4708 8.59532 18.6535 8.31721 18.7362C8.0391 18.8189 7.72269 18.7947 7.43757 18.669L6.68936 18.339" stroke="#342E34" stroke-width="1.2672" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Destinos</span><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.28967 6.29179C7.68162 6.68256 7.68162 7.31738 7.28967 7.70815L2.21955 12.7629C1.82927 13.152 1.19776 13.152 0.80748 12.7629L0.710331 12.666C0.318375 12.2753 0.318375 11.6405 0.710331 11.2497L4.97297 6.99997L0.710331 2.75024C0.318375 2.35947 0.318375 1.72465 0.710331 1.33388L0.807481 1.23703C1.19776 0.847934 1.82927 0.847934 2.21955 1.23703L7.28967 6.29179Z" fill="#342E34"/>
+            </svg>
+            
+      </button>
+    </li>
+    <li class="sidebar__item">
+      <!-- Dropdown Button -->
+      <button
+        class="dropdown-btn"
+        id="toggle-btn"
+        aria-expanded="false"
+        aria-controls="submenu-aventura"
+      ><span class="dropwdown-btn__wrapper"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_8481_1826)">
+        <path class="fill" d="M15.7256 6.75C16.7611 6.75 17.6006 5.91053 17.6006 4.875C17.6006 3.83947 16.7611 3 15.7256 3C14.6901 3 13.8506 3.83947 13.8506 4.875C13.8506 5.91053 14.6901 6.75 15.7256 6.75Z" stroke="#342E34" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="fill" d="M1.10059 18.7501L7.95371 7.11948C8.01988 7.0067 8.11439 6.91318 8.22786 6.84819C8.34134 6.78321 8.46982 6.74902 8.60059 6.74902C8.73135 6.74902 8.85984 6.78321 8.97331 6.84819C9.08678 6.91318 9.18129 7.0067 9.24746 7.11948L16.1006 18.7501H1.10059Z" stroke="#342E34" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="fill" d="M5.07129 12H12.1307" stroke="#342E34" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="fill" d="M14.0957 15.3476L17.1951 10.1173C17.2615 10.0054 17.3559 9.91265 17.469 9.84826C17.582 9.78386 17.7099 9.75 17.8401 9.75C17.9702 9.75 18.0981 9.78386 18.2112 9.84826C18.3243 9.91265 18.4187 10.0054 18.4851 10.1173L23.601 18.7498H16.101" stroke="#342E34" stroke-width="1.34" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_8481_1826">
+        <rect width="24" height="24" fill="white" transform="translate(0.350586)"/>
+        </clipPath>
+        </defs>
+        </svg>
+        Aventura</span><svg  class="sidebar__icon" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="fill color" d="M7.28967 6.29179C7.68162 6.68256 7.68162 7.31738 7.28967 7.70815L2.21955 12.7629C1.82927 13.152 1.19776 13.152 0.80748 12.7629L0.710331 12.666C0.318375 12.2753 0.318375 11.6405 0.710331 11.2497L4.97297 6.99997L0.710331 2.75024C0.318375 2.35947 0.318375 1.72465 0.710331 1.33388L0.807481 1.23703C1.19776 0.847934 1.82927 0.847934 2.21955 1.23703L7.28967 6.29179Z" fill="#342E34"/>
+            </svg>
+            
+      </button>
+
+      <!-- Submenu -->
+      <ul id="submenu-aventura" class="submenu submenu__wrapper" hidden>
+        <li><Checkbox label="Quads" /><Tooltip label="lorem ipsum"></Tooltip></li>
+        <li><Checkbox label="Parapente" /><Tooltip label="lorem ipsum"></Tooltip></li>
+        <li><Checkbox label="Rafting" /><Tooltip label="lorem ipsum"></Tooltip></li>
+        <li><Checkbox label="Explora" /><Tooltip label="lorem ipsum"></Tooltip></li>
+        <li><Checkbox label="Buceo" /><Tooltip label="lorem ipsum"></Tooltip></li>
+        <li><Checkbox label="Paracaídas" /><Tooltip label="Hola que tal como"></Tooltip></li>
+        <li><Checkbox label="Snowboard" /><Tooltip label="lorem ipsum"></Tooltip></li>
+        <li><a class="submenu__more"href="#">Ver 21 más</a></li>
+      </ul>
+    </li>
+
+    <li class="sidebar__item"> <button
+        class="dropdown-btn"
+        id="toggle-btn"
+        aria-expanded="false"
+        aria-controls="submenu-alojamiento"
+      ><span class="dropwdown-btn__wrapper"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="13.3779" cy="8.30373" r="1.056" stroke="#342E34" stroke-width="1.056"/>
+        <path d="M5.1194 11.3137C5.08177 10.8457 5.26866 10.3876 5.62295 10.0796L12.4082 4.1793C12.9645 3.69558 13.7922 3.69558 14.3484 4.1793L21.1337 10.0796C21.488 10.3876 21.6749 10.8457 21.6373 11.3137L21.063 18.4546C21.0012 19.2227 20.3599 19.8145 19.5894 19.8145H7.16732C6.39677 19.8145 5.75544 19.2227 5.69367 18.4546L5.1194 11.3137Z" stroke="#342E34" stroke-width="1.2672"/>
+        <line x1="8.30157" y1="19.8934" x2="8.30157" y2="21.9257" stroke="#342E34" stroke-width="1.2672" stroke-linecap="round"/>
+        <line x1="18.1063" y1="19.8934" x2="18.1063" y2="21.9257" stroke="#342E34" stroke-width="1.2672" stroke-linecap="round"/>
+        <path d="M15.8461 19.2622V14.7751C15.8461 13.6087 14.9005 12.6631 13.7341 12.6631H13.0554C11.8889 12.6631 10.9434 13.6087 10.9434 14.7751V19.2622" stroke="#342E34" stroke-width="1.2672"/>
+        </svg>
+        
+        Alojamiento</span><svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.28967 6.29179C7.68162 6.68256 7.68162 7.31738 7.28967 7.70815L2.21955 12.7629C1.82927 13.152 1.19776 13.152 0.80748 12.7629L0.710331 12.666C0.318375 12.2753 0.318375 11.6405 0.710331 11.2497L4.97297 6.99997L0.710331 2.75024C0.318375 2.35947 0.318375 1.72465 0.710331 1.33388L0.807481 1.23703C1.19776 0.847934 1.82927 0.847934 2.21955 1.23703L7.28967 6.29179Z" fill="#342E34"/>
+            </svg>
+            
+      </button></li>
+    <li class="sidebar__item"> <button
+        class="dropdown-btn"
+        id="toggle-btn"
+        aria-expanded="false"
+        aria-controls="submenu-precio"
+      ><span class="dropwdown-btn__wrapper">
+<svg  width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8481_1060)">
+<path class="fill" d="M8.34437 17.3443C8.20399 17.2038 8.12509 17.0133 8.125 16.8146V8.125H16.8146C17.0133 8.12509 17.2038 8.20399 17.3443 8.34437L26.6555 17.6556C26.796 17.7962 26.875 17.9869 26.875 18.1857C26.875 18.3845 26.796 18.5752 26.6555 18.7159L18.7187 26.6555C18.578 26.796 18.3874 26.875 18.1885 26.875C17.9897 26.875 17.799 26.796 17.6584 26.6555L8.34437 17.3443Z" stroke="#622F60" stroke-width="1.19999" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="fill fill_transparent" d="M12.775 12.25C12.775 12.5399 12.5399 12.775 12.25 12.775C11.96 12.775 11.725 12.5399 11.725 12.25C11.725 11.96 11.96 11.725 12.25 11.725C12.5399 11.725 12.775 11.96 12.775 12.25Z" fill="#622F60" stroke="#622F60" stroke-width="1.19999"/>
+</g>
+<defs>
+<clipPath id="clip0_8481_1060">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+        Precio</span><svg class="sidebar__icon" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="fill color" d="M7.28967 6.29179C7.68162 6.68256 7.68162 7.31738 7.28967 7.70815L2.21955 12.7629C1.82927 13.152 1.19776 13.152 0.80748 12.7629L0.710331 12.666C0.318375 12.2753 0.318375 11.6405 0.710331 11.2497L4.97297 6.99997L0.710331 2.75024C0.318375 2.35947 0.318375 1.72465 0.710331 1.33388L0.807481 1.23703C1.19776 0.847934 1.82927 0.847934 2.21955 1.23703L7.28967 6.29179Z" fill="#342E34"/>
+            </svg>
+            
+      </button>
+      <ul id="submenu-precio" class="submenu submenu__wrapper" hidden>
+        <li><Input id="price_min" name="minPrice" label="Introducir precio mínimo" id_label="min" placeholder=Mínimo></li>
+        <li><Input id="price_max" name="maxPrice" label="Introducir precio maximo" id_label="max" placeholder=Maximo></li>
+      </ul>
+    
+    
+    </li>
+  </ul>
+</nav>
+
+<script type="module" client:load>
+  
+  const button = document.querySelector('.button--filter');
+  const button_close = document.querySelector('.sidebar__iconclose');
+  const sidebar = document.getElementById('sidebar');
+
+
+  // Función para el dropdown
+  
+  function toggleSubmenu(button) {
+    console.log("dropdown toggled");
+    const submenu = document.getElementById(button.getAttribute('aria-controls'));
+    const isOpen = submenu.classList.contains('show');
+    
+    submenu.classList.toggle('show', !isOpen);
+    button.setAttribute('aria-expanded', !isOpen);
+
+    
+  }
+
+  // Para activar el dropdown con Enter o espacio
+  document.querySelectorAll('.dropdown-btn').forEach(button => {
+    button.addEventListener('click', () => toggleSubmenu(button));
+
+    button.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleSubmenu(button);
+      }
+    });
+  });
+
+  
+  button.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+
+    // Desplazar hacia el elemento (sidebar) suavemente
+    sidebar.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start' // Esto asegura que el scroll se detenga al principio del elemento
+    });
+  });
+
+  button_close.addEventListener('click', () => {
+    sidebar.classList.remove('open');
+   
+  });
+
+ 
+</script>
