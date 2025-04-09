@@ -18,7 +18,7 @@ img.reload {
   }
   
   .carousel-tablist .carousel-items.focus {
-    outline: 2px solid #007bff; /* Borde azul accesible */
+    outline: 2px solid #F88F50; /* Borde azul accesible */
   outline-offset: 3px; /* Separación del borde */
   }
   
@@ -124,7 +124,7 @@ img.reload {
   .carousel-tablist .controls {
     box-sizing: border-box;
     position: absolute;
-    bottom: 0;
+    bottom: 1.15rem;
     z-index: 10;
     display: flex;
     width: 100%;
@@ -138,52 +138,7 @@ img.reload {
   }
   
   /* SVG Controls */
-  
-  .carousel-tablist .rotation {
-    flex: 0 0 auto;
-    height: 30px;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    z-index: 10;
-  }
-  
-  .carousel-tablist .svg-play .background {
-    stroke: black;
-    fill: black;
-    stroke-width: 1px;
-    opacity: 0.6;
-  }
-  
-  .carousel-tablist .svg-play .border {
-    fill: transparent;
-    stroke: transparent;
-    stroke-width: 2px;
-  }
-  
-  .carousel-tablist .svg-play .pause {
-    stroke-width: 4;
-    fill: transparent;
-    stroke: transparent;
-  }
-  
-  .carousel-tablist .svg-play .play {
-    stroke-width: 1;
-    fill: transparent;
-    stroke: transparent;
-  }
-  
-  .carousel-tablist .pause .svg-play .pause,
-  .carousel-tablist .play .svg-play .play {
-    fill: white;
-    stroke: white;
-  }
-  
- 
-  
-
-  
+     
   .carousel-tablist [role="tab"] {
     position: relative;
     top: -2px;
@@ -248,8 +203,8 @@ img.reload {
   
   .carousel-tablist [role="tab"]:hover circle.border,
   .carousel-tablist [role="tab"]:hover circle.tab {
-    fill: #F88F50;;
-    stroke: #F88F50;;
+    fill: #F88F50;
+    stroke: #F88F50;
     opacity: 1;
   }
   
@@ -295,46 +250,19 @@ img.reload {
     margin: 0;
   }
   
-  .carousel-tablist-moreaccessible .carousel-item .carousel-caption h3 {
-    font-size: 1.1em;
-    padding: 0;
-    margin: 0;
-  }
   
   .carousel-tablist-moreaccessible .carousel-item .carousel-caption a:hover {
     background-color: rgb(0 0 0 / 20%);
   }
   
-  .carousel-tablist-moreaccessible .carousel-item .carousel-caption a:focus {
-    padding: 4px;
-    border: 2px solid #005a9c;
-    background-color: transparent;
-    color: black;
-    outline: none;
-  }
-
   .carousel_control {
     position: absolute;
-    top: 25%;
+    top: 38%;
   }
 
   .carousel-control-next {
     right: 0;
   }
 
-  @media (max-width: 35.98rem) { /* 575.98px */
-  
-    .carousel_control {position: absolute;
-      top: 28%;
-    }
-  }
-  
-  /* Shared CSS for Pause and Tab Controls */
-  
-  .carousel-tablist-moreaccessible .controls {
-    position: relative;
-    top: 0;
-    left: 0;
-    padding: 0.25em 0.25em 0;
-  }
-  
+
+ 

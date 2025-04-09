@@ -12,3 +12,16 @@
     overflow: hidden;
 }
 
+
+.pb-100 {
+    padding-bottom: 3.125rem; /* 50px */
+    position: relative;
+}
+
+@media (max-width: 35.9375rem) { /* 575.98px */
+    .pb-100 {
+        position: initial;
+        margin-left: 0;
+    }
+}
+

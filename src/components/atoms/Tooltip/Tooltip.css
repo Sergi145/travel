@@ -16,38 +16,38 @@
 
 .tooltip__image {
   position: relative;
-  top: 0.125rem; /* 2px a rem */
+  top: 0.125rem;
 }
 
 .tooltip__content {
   position: absolute;
-  bottom: 2.0625rem; /* 33px a rem */
+  bottom: 2.0625rem; 
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
   color: var(--color-charcoal);
-  padding: 0.3125rem; /* 5px a rem */
-  border-radius: 0.25rem; /* 4px a rem */
-  font-size: 0.875rem; /* 14px a rem */
+  padding: 0.3125rem; 
+  border-radius: 0.25rem; 
+  font-size: var(--letter-sm); 
   white-space: nowrap;
   opacity: 0;
-  font-weight: 500;
+  font-weight: var(--weight-xs);
   pointer-events: none;
   transition: opacity 0.2s ease-in-out;
   z-index: 10;
-  box-shadow: 0px 0px 3.125rem lightgrey; /* 50px a rem */
+  box-shadow: 0px 0px 3.125rem lightgrey; 
 }
 
 /* Flecha del tooltip */
 .tooltip__content::after {
   content: "";
   position: absolute;
-  bottom: -0.48rem; /* -4px a rem */
+  bottom: -0.48rem; 
   left: 44%;
   transform: rotate(45deg);
-  border-width: 0.5rem; /* 8px a rem */
+  border-width: 0.5rem; 
   border-style: solid;
-  border-color: white; /* Color de la flecha */
+  border-color: white;
 }
 
 /* Mostrar el tooltip al hacer hover o focus */

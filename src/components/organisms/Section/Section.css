@@ -1,0 +1,24 @@
+.section {
+    padding: 2.5rem 0 5rem 0;
+    text-align: center;
+}
+
+.section__title {
+    font-size:var(--letter-lgx4); 
+    font-weight: var(--weight-md);
+    font-family: 'Syne', sans-serif;
+}
+
+@media (max-width: 48rem) {     
+    .section__title {
+        font-size:var(--letter-lgx3); 
+        font-weight: var(--weight-md);
+        font-family: 'Syne', sans-serif;
+    }
+  }
+
+.section__subtitle {
+    font-size: var(--letter-lgx2); /* 22px */
+    color:var(--color-gray);
+    font-weight: var(--weight-xxs);
+}

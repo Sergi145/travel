@@ -1,17 +1,28 @@
-/* Variables de colores  */
 :root {
-   /* Tonos claros */
-   --color-cotton: #FBF6F4;     /* Muy claro, base para fondos */
-   --color-blush: #FAF7F5;      /* Blanco cálido alternativo */
-   --color-lavender-gray: #E0D9E0; /* Gris lavanda sutil */
- 
-   /* Tonos oscuros */
-   --color-eggplant: #622F60;   /* Púrpura oscuro profundo */
-   --color-charcoal: #342E34;   /* Gris con tinte morado */
-   --color-night: #2F222F;      /* Casi negro */
- 
-   /* Colores destacados */
-   --color-coral: #F88F50;      /* Naranja coral brillante */
-   --color-neon-lime: #B8FC28;  /* Verde lima neón */
+  /* Variables de colores  */
+   --color-cotton: #FBF6F4;    
+   --color-blush: #FAF7F5;     
+   --color--gray: #6B7D8D; 
+   --color-lavender-gray: #E0D9E0; 
+   --color-eggplant: #622F60;  
+   --color-charcoal: #342E34;  
+   --color-night: #2F222F;     
+   --color-coral: #F88F50;     
+
+   /* Tamaño de la fuente */
+   --letter-xs: 0.75rem;  
+  --letter-sm: 0.875rem; 
+  --letter-md: 1.125rem;  
+  --letter-lg: 1.25rem;   
+  --letter-lgx2: 1.375rem;  
+  --letter-lgx3: 1.875rem;
+  --letter-lgx4: 2.375rem;   
+
+    /* Peso de la fuente */
+    --weight-xxs: 400; 
+    --weight-xs: 500;   
+    --weight-sm: 600;  
+    --weight-md: 700;  
+
   }
   

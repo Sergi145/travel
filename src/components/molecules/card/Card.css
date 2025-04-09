@@ -1,9 +1,9 @@
 .card {
-  box-shadow: 0 0 3.125rem lightgrey; /* 50px */
-  border-radius: 1.5rem; /* 24px */
+  box-shadow: 0 0 3.125rem lightgrey;
+  border-radius: 1.5rem; 
   width: auto;
   position: relative;
-  margin-bottom: 0.75rem; /* 12px */
+  margin-bottom: 0.75rem; 
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -11,7 +11,7 @@
 
 .card__badge {
   position: absolute;
-  top: 0.625rem; /* 10px */
+  top: 0.625rem; 
   right: 0.625rem;
 }
 
@@ -38,12 +38,14 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 0.75rem 1rem; /* 12px 16px */
+  padding: 0.75rem 1rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
 }
 
 .card__title {
-  font-weight: bold;
-  font-size: 0.875rem;
+  font-weight: var(--weight-md);
+  font-size: var(--letter-sm);
   color: var(--color-eggplant);
 }
 
@@ -52,8 +54,8 @@
 }
 
 .card__subtitle {
-  font-size: 1.125rem;
-  font-weight: 700;
+  font-size: var(--letter-md);
+  font-weight: var(--weight-md);
   color: var(--color-charcoal);
 }
 
@@ -68,23 +70,23 @@
 }
 
 .card__label {
-  font-size: 0.75rem;
+  font-size: var(--letter-xs);
   color: var(--color-charcoal);
 }
 
 .card__price {
-  font-size: 1.375rem;
-  font-weight: 700;
+  font-size: var(--letter-lgx2);
+  font-weight: var(--weight-md);
 }
 
 .card__button--breakdown {
   text-decoration: underline;
-  font-size: 0.75rem;
+  font-size: var(--letter-xs);
   text-align: left;
   color: var(--color-eggplant);
   position: relative;
   width: max-content;
-  font-weight: 600;
+  font-weight: var(--weight-sm);
 }
 
 .card__button--image {
@@ -115,11 +117,9 @@
     width: 100%;
   }
 
-  .card__action-wrapper {
-    width: 100%;
-  }
-
-  .card__action-wrapper .button--reserve {
+  .card__action-wrapper,
+  .card__action-wrapper .button--reserve
+   {
     width: 100%;
   }
 }

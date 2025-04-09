@@ -1,56 +1,66 @@
 .button {
-  padding: 0.75rem 1.125rem; /* 12px 18px */
-  border-radius: 1.25rem;    /* 20px */
+  padding: 0.75rem 1.125rem; 
+  border-radius: 1.25rem; 
   border: none;
-  transition: background-color 0.2s ease;
   color: white;
+  transition: background-color 0.2s ease;
 }
 
 .button--primary {
   background-color: var(--color-eggplant);
+  padding: 0.75rem 2rem;
 }
 
 .button--secondary {
   background-color: var(--color-coral);
   color: var(--color-night);
+  padding: 0.75rem 2.5rem;
 }
 
 .button--light {
   background-color: white;
   color: var(--color-eggplant);
-  border: 0.0625rem solid var(--color-eggplant); /* 1px */
+  border: 0.0625rem solid var(--color-eggplant); 
 }
 
 .button--reserve {
-  color: var(--color-eggplant);
   background-color: white;
-  border: 0.0625rem solid var(--color-eggplant); /* 1px */
+  color: var(--color-eggplant);
+  border: 0.0625rem solid var(--color-eggplant); 
+  font-weight: var(--weight-sm);
+}
+
+.button--img {
+  margin-right: 0.625rem;      
+}
+
+.button--sm {
+  font-size: var(--letter-xs);
+  font-weight: var(--weight-md);            
+  padding: 0.25rem 0.75rem;  
+ 
 }
 
 .button--filter {
-  padding: 0.5rem 0.875rem;      /* 8px 14px */
+  padding: 0.5rem 0.875rem;    
   background-color: var(--color-blush);
   display: none;
-  font-weight: 600;
-  font-size: 1.25rem;            /* 20px */
+  font-weight: var(--weight-sm);
+  font-size: var(--letter-lg);        
   color: var(--color-night);
 }
 
-@media (max-width: 75rem) {      /* 1200px */
+@media (max-width: 75rem) {     
   .button--filter {
     display: flex;
     margin: 0 auto;
   }
 }
 
-
-
-.button--img {
-  margin-right: 0.625rem;        /* 10px */
+@media (max-width: 48rem) {     
+  .button--filter {
+    margin: auto;
+  }
 }
 
-.button--sm {
-  font-size: 0.75rem;            /* 12px */
-  padding: 0.25rem 0.75rem;      /* 4px 12px */
-  font-weight: 700;
-}
+
