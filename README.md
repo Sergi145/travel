@@ -13,19 +13,19 @@
 
 ### Wave
 
-![Wave](./assets/wave.jpg)
+![Wave](./src/assets/wave.jpg)
 
 ---
 
 ### SiteImprove
 
-![Siteimprove](./assets/siteimprove.jpg)
+![Siteimprove](./src/assets/siteimprove.jpg)
 
 ---
 
 ### Axe
 
-![Axe](./assets/Axe.jpg)
+![Axe](./src/assets/axe.jpg)
 
 ---
 
