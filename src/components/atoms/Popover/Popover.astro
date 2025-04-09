@@ -71,6 +71,7 @@ const popoverWrappers = document.querySelectorAll('.popover__wrapper');
       lastFocusedElement = document.activeElement;
       popover.hidden = false;
       popover.setAttribute('data-open', 'true');
+      openBtn.setAttribute('aria-expanded', 'true');
       popover.focus();
      
 adjustPopoverPosition(popover);
@@ -80,6 +81,7 @@ adjustPopoverPosition(popover);
     const close = () => {
       popover.hidden = true;
       popover.removeAttribute('data-open');
+      openBtn.setAttribute('aria-expanded', 'false');
       document.removeEventListener('keydown', handleKeyDown);
       lastFocusedElement?.focus();
     };

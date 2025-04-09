@@ -14,7 +14,7 @@ img.reload {
   }
   
   .carousel-tablist .carousel-items {
-    margin: 1.5rem 0;
+    margin: 1.1rem 0;
   }
   
   .carousel-tablist .carousel-items.focus {
@@ -141,7 +141,6 @@ img.reload {
      
   .carousel-tablist [role="tab"] {
     position: relative;
-    top: -2px;
     padding: 0;
     margin: 0;
     background-color: transparent;

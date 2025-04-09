@@ -4,6 +4,7 @@ header {
     align-items: center;
     padding-top: 0.7rem; 
     padding-bottom: 0rem;
+    height: 55px;
 }
 
 header h1 {

@@ -18,7 +18,7 @@
   }
 
 .section__subtitle {
-    font-size: var(--letter-lgx2); /* 22px */
+    font-size: var(--letter-lgx2);
     color:var(--color-gray);
     font-weight: var(--weight-xxs);
 }
