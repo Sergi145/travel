@@ -20,7 +20,7 @@
   height: 1rem; /* 16px */
   background-color: white;
   margin-right: 0.625rem; /* 10px */
-  border: 0.0625rem solid black; /* 1px */
+  border: 0.0625rem solid var(--color-night); /* 1px */
   border-radius: 0.125rem; /* 2px */
   display: inline-block;
   cursor: pointer;
@@ -32,11 +32,11 @@
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #FF8F50;
+  background-color: var(--color-coral);
 }
 
 /* Accesibilidad con foco */
 .checkbox-wrapper input[type="checkbox"]:focus + .checkbox-wrapper__custom-checkbox {
-  outline: 0.125rem solid black; /* 2px */
+  outline: 0.125rem solid var(--color-night); /* 2px */
   outline-offset: 0.125rem; /* 2px */
 }

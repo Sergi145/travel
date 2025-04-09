@@ -1,7 +1,7 @@
 /* Sidebar.css */
 .sidebar {
   margin-top: 4.0625rem; /* 65px */
-  background-color: #fbf6f4;
+  background-color: var(--color-cotton);
   padding: 1rem; /* 16px */
   border-radius: 1.5625rem; /* 25px */
   width: 75%;
@@ -59,7 +59,7 @@
 }
 
 .sidebar__title {
-  color: #342E34;
+  color: var(--color-charcoal);
   font-weight: 700;
   font-family: "Syne", sans-serif;
   text-align: center;
@@ -104,7 +104,7 @@
 .submenu__more {
   font-size: 0.875rem; /* 14px */
   font-weight: 600;
-  color: #622f60;
+  color: var(--color-eggplant);
   text-decoration: underline;
 }
 

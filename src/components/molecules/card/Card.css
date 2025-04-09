@@ -34,7 +34,7 @@
 }
 
 .card__footer {
-  background-color: #FBF6F4;
+  background-color: var(--color-cotton);
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -44,17 +44,17 @@
 .card__title {
   font-weight: bold;
   font-size: 0.875rem;
-  color: #622f60;
+  color: var(--color-eggplant);
 }
 
 .card__days {
-  color: #342E34;
+  color: var(--color-charcoal);
 }
 
 .card__subtitle {
   font-size: 1.125rem;
   font-weight: 700;
-  color: #342E34;
+  color: var(--color-charcoal);
 }
 
 .card__price-info {
@@ -69,7 +69,7 @@
 
 .card__label {
   font-size: 0.75rem;
-  color: #342E34;
+  color: var(--color-charcoal);
 }
 
 .card__price {
@@ -81,7 +81,7 @@
   text-decoration: underline;
   font-size: 0.75rem;
   text-align: left;
-  color: #622f60;
+  color: var(--color-eggplant);
   position: relative;
   width: max-content;
   font-weight: 600;

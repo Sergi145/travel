@@ -1,5 +1,5 @@
 .link {
-    color: #342E33;
+    color: var(--color-charcoal);
     font-weight: 700;
     display: flex;   
   }
@@ -16,7 +16,7 @@
     position: absolute;
     bottom: -2.1rem;
     left: 0;
-    background-color: #F88F50;
+    background-color: var(--color-coral);
     height: 0.125rem; /* 2px */
     border-radius: 0.125rem; /* 2px */
     content: '';
@@ -28,7 +28,7 @@
     height: 0.9375rem; /* 15px */
     width: 0.9375rem; /* 15px */
     position: absolute;
-    background-color: #F88F50;
+    background-color: var(--color-coral);
     top: 3rem; /* 30px */
     left: 40%;
     transform: rotate(45deg);

@@ -9,12 +9,12 @@
 }
 
 footer {
-    background-color: #e0d9e0;
+    background-color: var(--color-lavender-gray);
     padding: 0.625rem 0;
 }
 
 .footer__text {
     text-align: center;
-    color: #622F60;
+    color: var(--color-eggplant);
     font-weight: 700;
 }

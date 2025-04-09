@@ -312,6 +312,22 @@ img.reload {
     color: black;
     outline: none;
   }
+
+  .carousel_control {
+    position: absolute;
+    top: 25%;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+
+  @media (max-width: 35.98rem) { /* 575.98px */
+  
+    .carousel_control {position: absolute;
+      top: 28%;
+    }
+  }
   
   /* Shared CSS for Pause and Tab Controls */
   

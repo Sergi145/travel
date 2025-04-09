@@ -1,7 +1,7 @@
 .form__input {
     padding: 0.75rem; /* 12px */
     border-radius: 1.5rem; /* 24px */
-    border: 0.0625rem solid #622F60; /* 1px */
+    border: 0.0625rem solid var(--color-eggplant); /* 1px */
     width: 100%;
     background-image: url('./../../../../public/Vector.svg');
     background-repeat: no-repeat;

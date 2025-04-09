@@ -7,40 +7,43 @@
 }
 
 .button--primary {
-  background-color: #622F60;
+  background-color: var(--color-eggplant);
 }
 
 .button--secondary {
-  background-color: #FF8F50;
-  color: black;
+  background-color: var(--color-coral);
+  color: var(--color-night);
 }
 
 .button--light {
   background-color: white;
-  color: #622F60;
-  border: 0.0625rem solid #622F60; /* 1px */
+  color: var(--color-eggplant);
+  border: 0.0625rem solid var(--color-eggplant); /* 1px */
 }
 
 .button--reserve {
-  color: #622F60;
+  color: var(--color-eggplant);
   background-color: white;
-  border: 0.0625rem solid #622F60; /* 1px */
+  border: 0.0625rem solid var(--color-eggplant); /* 1px */
 }
 
 .button--filter {
   padding: 0.5rem 0.875rem;      /* 8px 14px */
-  background-color: #FAF7F5;
+  background-color: var(--color-blush);
   display: none;
   font-weight: 600;
   font-size: 1.25rem;            /* 20px */
-  color: #2f222f;
+  color: var(--color-night);
 }
 
 @media (max-width: 75rem) {      /* 1200px */
   .button--filter {
     display: flex;
+    margin: 0 auto;
   }
 }
+
+
 
 .button--img {
   margin-right: 0.625rem;        /* 10px */

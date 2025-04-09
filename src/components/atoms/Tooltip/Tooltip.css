@@ -4,7 +4,7 @@
 }
 
 .tooltip:focus {
-  outline: 0.125rem solid black; /* 2px a rem */
+  outline: 0.125rem solid var(--color-night); /* 2px a rem */
 }
 
 .tooltip__button {
@@ -25,7 +25,7 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
-  color: #342E34;
+  color: var(--color-charcoal);
   padding: 0.3125rem; /* 5px a rem */
   border-radius: 0.25rem; /* 4px a rem */
   font-size: 0.875rem; /* 14px a rem */

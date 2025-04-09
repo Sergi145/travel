@@ -38,9 +38,9 @@
 .popover__header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #E0D9E0;
+  border-bottom: 1px solid var(--color-lavender-gray);
   padding: 0.9375rem; /* 15px */
-  background-color: #FBF6F4;
+  background-color: var(--color-cotton);
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
 }
@@ -48,12 +48,12 @@
 .popover__header-title {
   font-weight: 700;
   font-size: 1.125rem; /* 18px */
-  color: #342E34;
+  color: var(--color-charcoal);
 }
 
 .popover__body {
   padding: 0.9375rem;
-  border-bottom: 1px solid #E0D9E0;
+  border-bottom: 1px solid var(--color-lavender-gray);
   background-color: white;
 }
 
@@ -81,7 +81,7 @@
 
 .popover__footer {
   padding: 0.9375rem;
-  background-color: #FBF6F4;
+  background-color: var(--color-cotton);
   border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
 }
@@ -95,7 +95,7 @@
 .popover__footer-final {
   font-weight: 700;
   font-size: 1.125rem;
-  color: #342E34;
+  color: var(--color-charcoal);
 }
 
 .popover__footer-final > span {
