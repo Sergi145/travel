@@ -3,17 +3,15 @@ import Button from './atoms/Button/Button.astro';
 import Header from './organisms/Header/Header.astro';
 import Section from './organisms/Section/Section.astro';
 import Carrousel from './molecules/carrousel/carrousel.astro';
-import Card from './molecules/card/card.astro';
+import Card from './molecules/card/Card.astro';
 import Footer from './molecules/Footer/Footer.astro';
 import Logo from './atoms/Logo/Logo.astro';
-import Checkbox from './atoms/Checkbox/Checkbox.astro';
 import Sidebar from './molecules/Sidebar/Sidebar.astro';
-import Popover from './atoms/Popover/Popover.astro';
 
 
 const travel = [
   {
-    imageSrc: './../../../../public/Rectangle_1.png',
+    imageSrc: 'Rectangle_1.png',
 	id: 'id_1',
     title: 'Egipto, África',
     type: 'Paracaídas',
@@ -21,7 +19,7 @@ const travel = [
     price: '180,00'
   },
   {
-    imageSrc: './../../../../public/Rectangle_2.png',
+    imageSrc: 'Rectangle_2.png',
 	id: 'id_2',
     title: 'Tailandia',
     type: 'Buceo',
@@ -29,7 +27,7 @@ const travel = [
     price: '220,00'
   },
   {
-    imageSrc: './../../../../public/Rectangle_1.png',
+    imageSrc: 'Rectangle_1.png',
 	id: 'id_3',
     title: 'India',
     type: 'Parapente',
@@ -37,7 +35,7 @@ const travel = [
     price: '160,00'
   },
   {
-	imageSrc: './../../../../public/Rectangle.png',
+	imageSrc: 'Rectangle.png',
 	id: 'id_4',
     title: 'India',
     type: 'Snowboard',
@@ -45,35 +43,35 @@ const travel = [
     price: '160,00'
   },
   {
-	imageSrc: './../../../../public/Rectangle_2.png',
+	imageSrc: 'Rectangle_2.png',
 	id: 'id_5',
     title: 'India',
     type: 'Snowboard',
     subtitle: 'Relájate con vistas al Ganges',
     price: '160,00'
   },{
-	imageSrc: './../../../../public/Rectangle.png',
+	imageSrc: 'Rectangle.png',
 	id: 'id_6',
     title: 'India',
     type: 'Yoga',
     subtitle: 'Relájate con vistas al Ganges',
     price: '160,00'
   },{
-	imageSrc: './../../../../public/Rectangle_1.png',
+	imageSrc: 'Rectangle_1.png',
 	id: 'id_7',
     title: 'India',
     type: 'Snowboard',
     subtitle: 'Relájate con vistas al Ganges',
     price: '160,00'
   }, {
-	imageSrc: './../../../../public/Rectangle.png',
+	imageSrc: 'Rectangle.png',
 	id: 'id_8',
     title: 'India',
     type: 'Rafting',
     subtitle: 'Relájate con vistas al Ganges',
     price: '160,00'
   }, {
-	imageSrc: './../../../../public/Rectangle_1.png',
+	imageSrc: 'Rectangle_1.png',
 	id: 'id_9',
     title: 'India',
     type: 'Rafting',
@@ -98,12 +96,12 @@ const travel = [
 		</aside>
 	  </div>
 	  <div class="col-12 col-sm-12 col-md-12 col-lg-8">
-		<Button className="button button--filter"><img class="button--img" src="./../../public/Frame.png" alt="">Ver filtros</Button>
+		<Button className="button button--filter"><img class="button--img" src="Frame.png" alt="">Ver filtros</Button>
 		<h4>Asia</h4>
 		<div id="container_cards" class="row" >
 			{travel.map(card => (
 				<div class="col-xs-12 col-sm-6 col-md-4" data-type={card.type} data-price={card.price.replace(',', '.').replace('*', '')}>
-					<Card {...card} client:load />
+					<Card {...card} />
 				</div>
 			  ))}
 		</div>

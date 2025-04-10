@@ -53,13 +53,13 @@
 @media (max-width: 75rem) {     
   .button--filter {
     display: flex;
-    margin: 0 auto;
+    margin: initial;
   }
 }
 
 @media (max-width: 48rem) {     
   .button--filter {
-    margin: auto;
+    margin: 0 auto;
   }
 }
 
